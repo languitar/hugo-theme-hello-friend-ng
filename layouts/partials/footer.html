@@ -17,4 +17,18 @@
         </div>
     </div>
     {{ end }}
+    {{ if .Site.Menus.footer }}
+    <div class="footer__inner">
+        <div class="footer__content">
+            <nav class="footer-menu">
+                {{ range $i, $item := .Site.Menus.footer }}
+                    {{ if $i }}
+                    ·
+                    {{ end }}
+                    <span><a href="{{ $item.URL | absLangURL }}" title="{{ $item.Title | default $item.Name }}"><span>{{ $item.Name }}</span></a></span>
+                {{ end }}
+            </nav>
+        </div>
+    </div>
+    {{ end }}
 </footer>

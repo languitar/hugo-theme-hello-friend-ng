@@ -427,6 +427,14 @@ hr {
   margin-top: 2.5em;
 }
 
+.footer-menu a {
+  text-decoration: none;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
 // Prism JS Additionals
 .highlight {
   margin: 30px auto;
