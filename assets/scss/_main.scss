@@ -11,6 +11,14 @@ html {
   box-sizing: inherit;
 }
 
+.toc a {
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
 body {
   width: 100vw;
   margin: 0;
@@ -295,6 +303,54 @@ blockquote {
     position: absolute;
     left: -40px;
     top: -20px;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.sidebar, .admonition-block {
+  margin: 40px;
+  padding: 20px;
+  margin: 0 2px;
+
+  // Default
+  background: $light-background-secondary;
+
+  @media (prefers-color-scheme: dark) {
+    background: $dark-background-secondary;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: $light-background-secondary;
+  }
+
+  [data-theme=dark] & {
+    background: $dark-background-secondary;
+  }
+
+  [data-theme=light] & {
+    background: $light-background-secondary;
+  }
+
+  @media #{$media-size-phone} {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  border-radius: 5px;
+
+  text-align: justify;
+  hyphens: auto;
+
+  .block-title {
+    font-size: 1rem;
+    margin-top: 0;
   }
 
   p:first-of-type {
