@@ -314,6 +314,18 @@ blockquote {
   }
 }
 
+.literal-block pre {
+  color: $dark-color;
+
+  @media (prefers-color-scheme: dark) {
+    color: $light-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $dark-color;
+  }
+}
+
 .sidebar, .admonition-block {
   margin: 40px;
   padding: 20px;
